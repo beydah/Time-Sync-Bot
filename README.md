@@ -22,7 +22,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam porta luctus diam
 - **You can star the project to support the project.**
 
 <div style="text-align:center;">
-    <a href="#binance-trading-bot">
+    <a href="#time-sync-bot">
         <img src="https://i.imgur.com/waxVImv.png" alt="Colorful Stick">
     </a>
 </div>
