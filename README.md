@@ -1,52 +1,54 @@
 # Time Sync Bot
 
 <div style="text-align:center;">
-    <a href="#time-sync-bot">
-        <img src="https://raw.githubusercontent.com/beydah/asset/main/banner/time-sync-bot-upper.png" alt="Banner">
-    </a>
+    <h1>🕒 Windows Time Synchronization Tool</h1>
+    <p>Keep your Windows system time in perfect sync automatically</p>
 </div>
 
-<div style="text-align:center;">
-    <a href="#time-sync-bot">
-        <img src="https://i.imgur.com/waxVImv.png" alt="Colorful Stick">
-    </a>
-</div>
+## 📋 Overview
+Time Sync Bot is a lightweight Windows utility that automatically synchronizes your system time with an internet time server at regular intervals. It runs in the background and ensures your computer's clock remains accurate.
 
-## Fast Information
-### Time Sync Bot
+## ✨ Features
+- Automatically syncs system time with internet time servers
+- Runs in the background with minimal resource usage
+- No installation required - just download and run
+- Simple and lightweight (single batch file)
+- Adjustable sync interval (default: 2 minutes)
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam porta luctus diam eu euismod. Morbi sed risus at elit vestibulum suscipit. Suspendisse eget erat eu mi condimentum imperdiet sed ac ex. In hac habitasse platea dictumst. Sed pharetra mi a rutrum malesuada. Vivamus ut risus ex. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Cras ut vulputate urna. 
+## 🚀 How It Works
+The bot uses the built-in Windows Time Service (`w32tm`) to synchronize your system time. It runs in a loop, syncing the time and then waiting for a specified interval before syncing again.
 
-### For Support
-- To provide support to the developer, you can follow it at [github/beydah](https://github.com/beydah).
-- **You can star the project to support the project.**
+## 📥 Download & Installation
+1. Click the "Code" button and select "Download ZIP"
+2. Extract the ZIP file to your preferred location
+3. Navigate to the `src` folder
+4. Double-click `time_sync_bot.bat` to run the bot
 
-<div style="text-align:center;">
-    <a href="#time-sync-bot">
-        <img src="https://i.imgur.com/waxVImv.png" alt="Colorful Stick">
-    </a>
-</div>
+## ⚙️ Usage
+Simply run the `time_sync_bot.bat` file. A command prompt window will open showing the sync status.
 
-## Usage
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam porta luctus diam eu euismod. Morbi sed risus at elit vestibulum suscipit. Suspendisse eget erat eu mi condimentum imperdiet sed ac ex. In hac habitasse platea dictumst. Sed pharetra mi a rutrum malesuada. Vivamus ut risus ex. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Cras ut vulputate urna. 
+To run it at startup:
+1. Press `Win + R`, type `shell:startup` and press Enter
+2. Create a shortcut to `time_sync_bot.bat` in the Startup folder
 
-## Download Steps
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam porta luctus diam eu euismod. Morbi sed risus at elit vestibulum suscipit. Suspendisse eget erat eu mi condimentum imperdiet sed ac ex. In hac habitasse platea dictumst. Sed pharetra mi a rutrum malesuada. Vivamus ut risus ex. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Cras ut vulputate urna. 
+## ⚠️ Requirements
+- Windows operating system
+- Internet connection for time synchronization
+- Administrator privileges (for time synchronization)
 
-## Installation Steps
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam porta luctus diam eu euismod. Morbi sed risus at elit vestibulum suscipit. Suspendisse eget erat eu mi condimentum imperdiet sed ac ex. In hac habitasse platea dictumst. Sed pharetra mi a rutrum malesuada. Vivamus ut risus ex. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Cras ut vulputate urna. 
+## 🔄 Customization
+You can modify the sync interval by editing the `timeout /t 125` line in the batch file. The number represents seconds (125 seconds = ~2 minutes).
 
-## License
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam porta luctus diam eu euismod. Morbi sed risus at elit vestibulum suscipit. Suspendisse eget erat eu mi condimentum imperdiet sed ac ex. In hac habitasse platea dictumst. Sed pharetra mi a rutrum malesuada. Vivamus ut risus ex. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Cras ut vulputate urna. 
+## 📜 License
+This project is open source and available under the [MIT License](LICENSE).
 
-<div style="text-align:center;">
-    <a href="#time-sync-bot">
-        <img src="https://i.imgur.com/waxVImv.png" alt="Colorful Stick">
-    </a>
-</div>
+## 🤝 Contributing
+Contributions are welcome! Feel free to submit issues and pull requests.
 
+## 📬 Contact
+For support or questions, please open an issue on the GitHub repository.
+
+---
 <div style="text-align: center;">
-    <a href="#time-sync-bot">
-        <img src="https://raw.githubusercontent.com/beydah/asset/main/button/scroll_off.png" style="width: 15%;"  alt="^ Scroll UP ^">
-    </a>
+    <p>Made with ❤️ for accurate timekeeping</p>
 </div>
