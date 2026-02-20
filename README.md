@@ -1,54 +1,102 @@
-# Time Sync Bot
+# 🕒 Time Sync Bot
 
-<div style="text-align:center;">
-    <h1>🕒 Windows Time Synchronization Tool</h1>
-    <p>Keep your Windows system time in perfect sync automatically</p>
+<div align="center">
+
+![Windows](https://img.shields.io/badge/Platform-Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white)
+![PowerShell](https://img.shields.io/badge/PowerShell-5.0%2B-5391FE?style=for-the-badge&logo=powershell&logoColor=white)
+![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
+![Status](https://img.shields.io/badge/Status-Active-brightgreen?style=for-the-badge)
+
+**A lightweight, automated utility to keep your Windows system clock in perfect synchronization.**
+
+[Features](#-features) • [Installation](#-installation) • [Usage](#-usage) • [Configuration](#-configuration) • [Contributing](#-contributing) • [License](#-license)
+
 </div>
 
+---
+
 ## 📋 Overview
-Time Sync Bot is a lightweight Windows utility that automatically synchronizes your system time with an internet time server at regular intervals. It runs in the background and ensures your computer's clock remains accurate.
+
+**Time Sync Bot** is a "set it and forget it" tool designed for Windows environments where maintaining precise system time is critical. It runs silently in the background, periodically synchronizing your computer's clock with the global Internet Time Servers using the built-in Windows Time Service (`w32tm`).
+
+Unlike the default Windows synchronization which can be unreliable or infrequent, **Time Sync Bot** ensures your clock never drifts, making it perfect for:
+*   Trading & Financial Applications
+*   Server Environments
+*   Gaming & eSports
+*   Development & Debugging
 
 ## ✨ Features
-- Automatically syncs system time with internet time servers
-- Runs in the background with minimal resource usage
-- No installation required - just download and run
-- Simple and lightweight (single batch file)
-- Adjustable sync interval (default: 2 minutes)
 
-## 🚀 How It Works
-The bot uses the built-in Windows Time Service (`w32tm`) to synchronize your system time. It runs in a loop, syncing the time and then waiting for a specified interval before syncing again.
+| Feature              | Description                                                                    |
+| :------------------- | :----------------------------------------------------------------------------- |
+| **🛡️ Secure & Safe**  | Explicitly checks for **Administrator privileges** to prevent silent failures. |
+| **🚀 Zero-Install**   | Portable design. No installers, registry changes, or bloatware.                |
+| **🤖 Automated**      | Runs in a continuous loop with a configurable interval (default: 2 minutes).   |
+| **👁️ Visible Status** | Provides clear, color-coded console output (Green = OK, Red = Error).          |
+| **⚡ Robust Logic**   | Built with modern **PowerShell** for superior error handling and reliability.  |
 
-## 📥 Download & Installation
-1. Click the "Code" button and select "Download ZIP"
-2. Extract the ZIP file to your preferred location
-3. Navigate to the `src` folder
-4. Double-click `time_sync_bot.bat` to run the bot
+## 📥 Installation
+
+1.  **Download** the latest version from the repository.
+    *   Click the `<> Code` button and select `Download ZIP`.
+2.  **Extract** the contents to a folder of your choice (e.g., `C:\Tools\Time-Sync-Bot`).
+3.  Navigate to the `src` folder.
 
 ## ⚙️ Usage
-Simply run the `time_sync_bot.bat` file. A command prompt window will open showing the sync status.
 
-To run it at startup:
-1. Press `Win + R`, type `shell:startup` and press Enter
-2. Create a shortcut to `time_sync_bot.bat` in the Startup folder
+### Standard Method
+1.  Navigate to the `src` directory.
+2.  Right-click on **`run.bat`**.
+3.  Select **"Run as administrator"**.
+4.  A console window will appear and start synchronizing immediately.
 
-## ⚠️ Requirements
-- Windows operating system
-- Internet connection for time synchronization
-- Administrator privileges (for time synchronization)
+> **Note:** Administrator privileges are **required** because changing the system time is a protected action in Windows. The script will warn you if you forget this step.
 
-## 🔄 Customization
-You can modify the sync interval by editing the `timeout /t 125` line in the batch file. The number represents seconds (125 seconds = ~2 minutes).
+### Auto-Start with Windows
+To have the bot run automatically when you log in:
 
-## 📜 License
-This project is open source and available under the [MIT License](LICENSE).
+1.  Press `Win + R`, type `shell:startup`, and hit **Enter**.
+2.  Create a **Shortcut** to `src/run.bat` in this folder.
+3.  **Important:** Configure the shortcut to always run as Admin:
+    *   Right-click the Shortcut > **Properties**.
+    *   Click **Advanced...** button.
+    *   Check **"Run as administrator"**.
+    *   Click **OK** > **OK**.
+
+## 🔧 Configuration
+
+You can customize the synchronization interval by editing the script.
+
+1.  Open `src/time_sync.ps1` with a text editor (Notepad, VS Code, etc.).
+2.  Locate the configuration region at the top:
+    ```powershell
+    #region Configuration
+    $INTERVAL_SECONDS = 120  # Change this value (in seconds)
+    #endregion
+    ```
+3.  Change `120` to your desired interval (e.g., `3600` for 1 hour).
+4.  Save and restart the bot.
 
 ## 🤝 Contributing
-Contributions are welcome! Feel free to submit issues and pull requests.
 
-## 📬 Contact
-For support or questions, please open an issue on the GitHub repository.
+Contributions are welcome! If you have ideas for improvements:
+
+1.  Fork the project.
+2.  Create your feature branch (`git checkout -b feature/AmazingFeature`).
+3.  Commit your changes (`git commit -m 'Add some AmazingFeature'`).
+4.  Push to the branch (`git push origin feature/AmazingFeature`).
+5.  Open a Pull Request.
+
+## 📜 License
+
+Distributed under the **MIT License**. See [`LICENSE`](LICENSE) for more information.
+
+## 👨‍💻 Developer
+
+Developed by **Ilkay Beydah Saglam**.
 
 ---
-<div style="text-align: center;">
-    <p>Made with ❤️ for accurate timekeeping</p>
+
+<div align="center">
+    <sub>Made with ❤️ for precision and accuracy.</sub>
 </div>

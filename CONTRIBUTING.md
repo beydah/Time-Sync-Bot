@@ -1,61 +1,71 @@
-# Contributing to Time Sync Bot
+# 🤝 Contributing to Time Sync Bot
 
-Thank you for your interest in contributing to Time Sync Bot! We appreciate your time and effort to help improve this project. This guide will help you get started with contributing.
+First off, thank you for considering contributing to **Time Sync Bot**! It's people like you that make the open-source community such an amazing place to learn, inspire, and create.
 
-## 🛠️ Getting Started
+## 📚 Table of Contents
+- [Getting Started](#-getting-started)
+- [Development Process](#-development-process)
+- [Coding Standards](#-coding-standards-important)
+- [Pull Request Process](#-pull-request-process)
+- [Reporting Bugs](#-reporting-bugs)
 
-1. **Fork the repository** on GitHub
-2. **Clone your fork** to your local machine
-   ```bash
-   git clone https://github.com/beydah/Time-Sync-Bot.git
-   cd Time-Sync-Bot
-   ```
-3. **Create a new branch** for your changes
-   ```bash
-   git checkout -b feature/your-feature-name
-   ```
+---
 
-## 🧪 Testing Your Changes
+## 🚀 Getting Started
 
-Before submitting your changes, please ensure:
+1.  **Fork** the repository on GitHub.
+2.  **Clone** your fork locally:
+    ```bash
+    git clone https://github.com/beydah/Time-Sync-Bot.git
+    cd Time-Sync-Bot
+    ```
+3.  **Create a Branch** for your feature or fix:
+    ```bash
+    git checkout -b feature/amazing-feature
+    ```
 
-1. The script runs without errors on Windows
-2. Time synchronization works as expected
-3. No sensitive information is included in your changes
+## 🛠️ Development Process
 
-## 📝 Submitting Changes
+The core logic lies in `src/time_sync.ps1`. You can test your changes by running the script locally.
 
-1. **Commit your changes** with a clear and descriptive message
-   ```bash
-   git commit -m "Add: Brief description of your changes"
-   ```
-2. **Push your changes** to your fork
-   ```bash
-   git push origin feature/your-feature-name
-   ```
-3. **Create a Pull Request** from your fork to the main repository
+> **Note**: You must run your terminal or the script as **Administrator** to test the actual time synchronization functionality.
 
-## 📋 Pull Request Guidelines
+## 📏 Coding Standards (IMPORTANT)
 
-- Keep pull requests focused on a single feature or bug fix
-- Write clear, concise commit messages
-- Update the README.md if your changes affect the documentation
-- Ensure your code follows the project's style and conventions
+To maintain consistency, this project enforces **strict naming conventions**. Please ensure your code adheres to the following rules before submitting a PR:
 
-## 🐛 Reporting Issues
+| Type                 | Format         | Example                                    |
+| :------------------- | :------------- | :----------------------------------------- |
+| **Functions**        | `F_Snake_Case` | `function F_Check_Admin { ... }`           |
+| **Classes**          | `C_Snake_Case` | `class C_Custom_Type { ... }`              |
+| **Constants**        | `SNAKE_CASE`   | `$INTERVAL_SECONDS = 120`                  |
+| **Global Variables** | `Snake_Case`   | `$Global_Counter = 0`                      |
+| **Local Variables**  | `snake_case`   | `$current_time = Get-Date`                 |
+| **Parameters**       | `p_snake_case` | `param([string]$p_message)`                |
+| **Regions**          | Required       | Use `#region Header`, `#region Main`, etc. |
 
-If you find a bug or have a feature request, please open an issue with the following information:
+### Code Style
+*   Use **4 spaces** for indentation.
+*   Keep functions small and focused on a single task.
+*   Add comments for complex logic.
+*   **Header Section**: All scripts must have a standard header region describing the file.
 
-- A clear title and description
-- Steps to reproduce the issue (if applicable)
-- Expected vs. actual behavior
-- Screenshots (if helpful)
-- Your operating system and version
+## 📥 Pull Request Process
 
-## 📜 Code of Conduct
+1.  **Update Documentation**: If you changed functionality, update `README.md`.
+2.  **Verify**: Run the script and ensure it passes the Admin check and syncs time correctly.
+3.  **Clean Up**: Remove any debug `Write-Host` statements you added (unless they use the standard `F_Write_Log`).
+4.  **Submit**: Open a Pull Request to the `main` branch. Provide a clear title and description of your changes.
 
-Please note that this project is released with a [Contributor Code of Conduct](CODE_OF_CONDUCT.md). By participating in this project, you agree to abide by its terms.
+## 🐛 Reporting Bugs
 
-## 🙏 Thank You!
+If you find a bug, please create a GitHub Issue with:
+*   **Description**: What happened?
+*   **Steps to Reproduce**: How can we see it too?
+*   **Expected Behavior**: What should have happened?
+*   **Screenshots/Logs**: Any red error text or screenshots.
+*   **Environment**: Windows version, PowerShell version.
 
-Your contributions make open-source software amazing. Thank you for taking the time to contribute!
+---
+
+Thank you for helping make **Time Sync Bot** better! 🚀
